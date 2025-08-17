@@ -18,11 +18,11 @@
 
 #define		KEY_0_RCU			RCU_GPIOC
 #define 	KEY_0_GPIO		GPIOC
-#define		KEY_0_PIN			GPIO_PIN_1
+#define		KEY_0_PIN			GPIO_PIN_8
 
 #define		KEY_1_RCU			RCU_GPIOC
 #define 	KEY_1_GPIO		GPIOC
-#define		KEY_1_PIN			GPIO_PIN_13
+#define		KEY_1_PIN			GPIO_PIN_6
 
 #define key_scan_time   ((uint32_t)50)
 

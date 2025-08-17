@@ -58,6 +58,7 @@ void KEY_GPIO_Configure(void)
                   KEY_1_PIN);
     /*led0 off*/
     //gpio_bit_set(LED_1_GPIO,LED_1_PIN);
+    //gpio_bit_set(LED_0_GPIO,LED_0_PIN);
 
 
 }

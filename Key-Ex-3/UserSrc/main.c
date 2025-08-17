@@ -27,6 +27,7 @@ int main(void)
             delay_1ms(50);
             gSysVar.tick_flag1ms=0;
             //SysTick_KEY_Scan();
+            /*
             if(breathe_flag==SET)
             {
                 Duty_Cycle=Duty_Cycle+10;
@@ -43,7 +44,9 @@ int main(void)
             {
                 breathe_flag=SET;
             }
-            timer_channel_output_pulse_value_config(TIMER0,TIMER_CH_0,Duty_Cycle)  ;
+            timer_channel_output_pulse_value_config(TIMER1,TIMER_CH_1,Duty_Cycle)  ;
+            */
+            
         }
         
     }

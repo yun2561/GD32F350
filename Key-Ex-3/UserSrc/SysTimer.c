@@ -10,8 +10,8 @@ void Timer0_PWM_Init(void)
 {
     timer_parameter_struct timer_initpara;
     timer_oc_parameter_struct timer_ocintpara;
-    rcu_periph_clock_enable(RCU_TIMER0);
-    timer_deinit(TIMER0);
+    rcu_periph_clock_enable(RCU_TIMER1);
+    timer_deinit(TIMER1);
     timer_initpara.prescaler=119;
     timer_initpara.alignedmode=TIMER_COUNTER_EDGE;
     timer_initpara.counterdirection=TIMER_COUNTER_UP;
@@ -19,7 +19,7 @@ void Timer0_PWM_Init(void)
     timer_initpara.clockdivision=TIMER_CKDIV_DIV1;
     timer_initpara.repetitioncounter=0;
     
-    timer_init(TIMER0,&timer_initpara);
+    timer_init(TIMER1,&timer_initpara);
     
     
     timer_ocintpara.outputstate=TIMER_CCX_ENABLE;
@@ -29,17 +29,17 @@ void Timer0_PWM_Init(void)
     timer_ocintpara.ocidlestate=TIMER_OC_IDLE_STATE_LOW;
     timer_ocintpara.ocnidlestate=TIMER_OCN_IDLE_STATE_LOW;
     
-    timer_channel_output_config(TIMER0,TIMER_CH_0,&timer_ocintpara);
+    timer_channel_output_config(TIMER1,TIMER_CH_1,&timer_ocintpara);
     
-    timer_channel_output_pulse_value_config(TIMER0,TIMER_CH_0,250);
+    timer_channel_output_pulse_value_config(TIMER1,TIMER_CH_1,250);
     
-    timer_channel_output_mode_config(TIMER0,TIMER_CH_0,TIMER_OC_MODE_PWM0);
+    timer_channel_output_mode_config(TIMER1,TIMER_CH_1,TIMER_OC_MODE_PWM1);
     
-    timer_channel_output_shadow_config(TIMER0,TIMER_CH_0,TIMER_OC_SHADOW_DISABLE);
+    timer_channel_output_shadow_config(TIMER1,TIMER_CH_1,TIMER_OC_SHADOW_DISABLE);
     
-    timer_primary_output_config(TIMER0,ENABLE);
-    timer_auto_reload_shadow_enable(TIMER0);
-    timer_enable(TIMER0);
+    timer_primary_output_config(TIMER1,ENABLE);
+    timer_auto_reload_shadow_enable(TIMER1);
+    timer_enable(TIMER1);
     
     
 }

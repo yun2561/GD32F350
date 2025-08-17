@@ -16,7 +16,7 @@
         <TargetCommonOption>
           <Device>GD32F350RB</Device>
           <Vendor>GigaDevice</Vendor>
-          <PackID>GigaDevice.GD32F3x0_DFP.3.3.0</PackID>
+          <PackID>GigaDevice.GD32F3x0_DFP.3.0.2</PackID>
           <PackURL>https://gd32mcu.com/data/documents/pack/</PackURL>
           <Cpu>IRAM(0x20000000,0x04000) IROM(0x08000000,0x20000) CPUTYPE("Cortex-M4") FPU2 CLOCK(12000000) ELITTLE</Cpu>
           <FlashUtilSpec></FlashUtilSpec>
@@ -577,6 +577,11 @@
               <FileType>1</FileType>
               <FilePath>..\UserSrc\Uart.c</FilePath>
             </File>
+            <File>
+              <FileName>FIFO.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\UserSrc\FIFO.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -641,6 +646,11 @@
               <FileName>Uart.h</FileName>
               <FileType>5</FileType>
               <FilePath>..\UserHeader\Uart.h</FilePath>
+            </File>
+            <File>
+              <FileName>FIFO.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\UserHeader\FIFO.h</FilePath>
             </File>
           </Files>
         </Group>

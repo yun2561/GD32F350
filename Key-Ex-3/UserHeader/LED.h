@@ -12,10 +12,10 @@
 
 #define	LED_0_RCU	RCU_GPIOA
 #define LED_0_GPIO  GPIOA
-#define	LED_0_PIN	GPIO_PIN_8
+#define	LED_0_PIN	GPIO_PIN_1
 
-#define		LED_1_RCU			RCU_GPIOD
-#define 	LED_1_GPIO		    GPIOD
+#define		LED_1_RCU			RCU_GPIOA
+#define 	LED_1_GPIO		    GPIOA
 #define		LED_1_PIN			GPIO_PIN_2
 
 
