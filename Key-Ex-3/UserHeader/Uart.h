@@ -10,6 +10,7 @@
 #define __SYS_UART_H__
 
 #include "gd32f3x0_libopt.h"
+// UART DMA 状态码定义
 typedef enum {
     UART_DMA_STATUS_IDLE = 0,
     UART_DMA_STATUS_BUSY,
@@ -31,7 +32,9 @@ typedef enum {
     UART_DMA_ERROR_TIMEOUT
 } uart_dma_error_t;
 
+// UART 参数配置
 typedef struct {
+    rcu_periph_enum rcu_periph;
     uint32_t uart_periph;
     uint32_t uart_baudrate;
     uint32_t word_lenght;
@@ -40,12 +43,15 @@ typedef struct {
     uint32_t hardware_flow;       
 } uart_hw_config_t;
 
+// DMA 参数配置
 typedef struct{
     uint32_t dma_periph;
     dma_channel_enum tx_channel;
     dma_channel_enum rx_channel;
-    uint32_t tx_prority;
-    uint32_t rx_perority; 
+    uint32_t tx_priority;
+    uint32_t rx_priority; 
+    bool tx_enable_circular_mode;
+    bool rx_enable_circular_mode;
 } uart_dma_hw_config_t;
 
 // 错误恢复配置结构
@@ -55,7 +61,7 @@ typedef struct {
     uint32_t recovery_timeout_ms;
     void (*error_callback)(uart_dma_error_t error);
 } uart_dma_error_config_t;
-
+//UART+DMA 参数配置
 typedef struct 
 {
     uart_hw_config_t uart_config;
@@ -64,10 +70,12 @@ typedef struct
     uint16_t tx_fifo_size;
     uint16_t rx_fifo_size;
     uint16_t ping_pong_size;   
-    bool enable_circular_mode;
+    //bool enable_circular_mode;
     bool enable_error_recovery; 
+    
 } uart_dma_config_t;
 
+//FIFO配置
 typedef struct 
 {
     uint8_t * buffer;
@@ -77,6 +85,7 @@ typedef struct
     uint16_t count;
     bool is_full;
 } fifo_queue_t;
+//RING配置
 typedef struct
 {
     uint8_t* buffer;
@@ -87,10 +96,10 @@ typedef struct
 } ring_buffer_t;
 
 // 回调函数类型定义
-typedef void (*uart_dma_callback_t)(uart_dma_status_t status, uint16_t length);
+//typedef void (*uart_dma_callback_t)(uart_dma_status_t status, uint16_t length);
 
 /*Uart init*/
-void UART_DMA_Init(void);
+//void UART_DMA_Init(void);
 /*Uart init*/
 void UART_Init(void);
 

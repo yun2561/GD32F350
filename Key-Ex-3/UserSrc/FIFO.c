@@ -6,24 +6,26 @@
 */
 #include "FIFO.h"
 
-
+/*
 static fifo_error_t fifo_init(fifo_queue_t*fifo,uint8_t*buff,uint16_t size)
 {
     // 
-    return UART_DMA_ERROR_NONE;
+    return FIFO_ERROR_NONE;
 }
 static fifo_error_t fifo_enqueue(fifo_queue_t* fifo, const uint8_t* data, uint16_t length)
 {
     // 
-    return UART_DMA_ERROR_NONE;
+    return FIFO_ERROR_NONE;
 }
 static fifo_error_t fifo_dequeue(fifo_queue_t* fifo, uint8_t* data, uint16_t* length)
 {
     // 
-    return UART_DMA_ERROR_NONE;
+    return FIFO_ERROR_NONE;
 }
 static fifo_error_t fifo_flush(fifo_queue_t* fifo)
 {
     // 
-    return UART_DMA_ERROR_NONE;
+    return FIFO_ERROR_NONE;
 }
+*/
+
